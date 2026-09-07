@@ -5,3 +5,4 @@ plotly
 scipy==1.18.1
 streamlit==1.63.0
 pandapower==3.5.4
+pytest

@@ -189,6 +189,32 @@ These are reference scenario checks for the conceptual model rather than formal 
 
 ---
 
+## Testing & Validation
+
+The project includes an automated `pytest` validation suite covering the core engineering calculations and planning logic.
+
+Current automated test suite: **45 passing tests**
+
+Validation coverage includes:
+
+- BESS power and energy block sizing
+- N+1 block-redundancy calculations
+- Apparent-power calculations
+- Transformer loading and planning classifications
+- Future-growth scenarios
+- Design-option recommendation logic
+- Future N+1 design selection
+- Invalid-input handling
+- Integration testing of the real design engine
+
+The integrated planning-model tests verify the expected future N+1 recommendation sequence under the baseline assumptions:
+
+| Future Export Growth | Preferred Future N+1 Design |
+|---|---|
+| 0% | Option B |
+| 15% | Option D |
+| 30% | Option E |
+
 ## Engineering Assumptions & Limitations
 
 This project is intended for preliminary conceptual engineering analysis and portfolio demonstration. The modeled results should not be interpreted as construction-ready utility interconnection studies or equipment specifications.

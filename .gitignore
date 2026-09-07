@@ -15,3 +15,5 @@ Thumbs.db
 
 # Streamlit secrets
 .streamlit/secrets.toml
+
+.pytest_cache/
