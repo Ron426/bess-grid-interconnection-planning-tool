@@ -91,14 +91,20 @@ BESS Blocks
 - Evaluates reactive-power injection and absorption
 - Detects modeled undervoltage and overvoltage conditions
 
+
 ### Automatic Reactive-Power Tuning
+
 The automatic VAR tuner searches the available reactive-power operating range and identifies the minimum-magnitude reactive-power adjustment required to satisfy the modeled future N+1 electrical criteria.
 
-For example:
+#### Example: Undervoltage Correction
 
-- Low utility voltage → reactive-power injection
-- High utility voltage → reactive-power absorption
-- Nominal voltage → zero VAR support when compensation is unnecessary
+In this example, a **0.95 pu utility-source voltage** creates an undervoltage condition. The uncompensated case fails the modeled voltage criterion, so the tuner recommends **+15% reactive-power injection (+2.96 MVAr)**.
+
+![Automatic VAR Tuning - Before Compensation](assets/var_tuning_before.png)
+
+Following compensation, the minimum modeled voltage rises from **0.9475 pu to 0.9507 pu**, restoring the voltage criterion to **PASS**. For the selected 20% future-growth scenario, the planning engine recommends **Option E: 65 MW / 130 MWh BESS with a 100 MVA main transformer**.
+
+![Automatic VAR Tuning - After Compensation](assets/var_tuning_after.png)
 
 ### Dispatch & Optimization
 - Simulates BESS dispatch behavior
