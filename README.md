@@ -32,6 +32,18 @@ Users can vary grid voltage, future export growth, reactive-power capability, re
 
 ---
 
+## Tech Stack
+
+- **Python** – core engineering calculations and model logic
+- **Streamlit** – interactive web application and engineering scenario controls
+- **pandapower** – conceptual AC power-flow modeling
+- **NumPy** – numerical calculations
+- **Pandas** – tabular engineering results and scenario summaries
+- **Matplotlib / Plotly** – engineering visualizations
+- **SciPy** – numerical and optimization support
+- **Git / GitHub** – version control and project hosting
+- **Streamlit Community Cloud** – live application deployment
+
 ## Main Features
 
 ### BESS Sizing
@@ -174,6 +186,23 @@ The model was exercised across several reference scenarios to verify consistent 
 | Growth + Overvoltage | 30% | 1.05 pu | -10% absorption | Option E | 70 MW / 140 MWh | 100 MVA |
 
 These are reference scenario checks for the conceptual model rather than formal utility-study validation.
+
+---
+
+## Engineering Assumptions & Limitations
+
+This project is intended for preliminary conceptual engineering analysis and portfolio demonstration. The modeled results should not be interpreted as construction-ready utility interconnection studies or equipment specifications.
+
+Key assumptions and limitations include:
+
+- The BESS is represented using simplified modular 5 MW / 10 MWh blocks.
+- The network topology represents a conceptual 115 kV utility interconnection with a 34.5 kV collector system.
+- Transformer and feeder evaluations use simplified conceptual loading criteria rather than manufacturer-specific thermal or emergency ratings.
+- The AC power-flow model is intended for steady-state planning analysis and does not represent electromagnetic-transient behavior.
+- Reactive-power support is modeled through configurable inverter capability and command assumptions.
+- N+1 analysis evaluates conceptual BESS-block redundancy and selected equipment-loading constraints.
+- Protection coordination, short-circuit duty, grounding, harmonics, insulation coordination, arc-flash analysis, and detailed relay settings are outside the current project scope.
+- Utility-specific interconnection requirements and detailed equipment data would be required for a real project.
 
 ---
 
