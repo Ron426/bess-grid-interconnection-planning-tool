@@ -1,7 +1,7 @@
-numpy
-pandas
+numpy==2.4.6
+pandas==2.3.3
 matplotlib
 plotly
-scipy
-streamlit
-pandapower
+scipy==1.18.1
+streamlit==1.63.0
+pandapower==3.5.4
