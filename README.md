@@ -1,26 +1,34 @@
-# Utility-Scale BESS Grid Interconnection & Substation Planning Tool
+# ⚡ Utility-Scale BESS Grid Interconnection & Substation Planning Tool
 
-An independent conceptual electrical-engineering project for evaluating the preliminary design and grid integration of a utility-scale Battery Energy Storage System (BESS).
+A Python and Streamlit-based conceptual electrical-engineering tool for evaluating utility-scale Battery Energy Storage System (BESS) grid interconnection, substation capacity, AC power flow, N+1 reliability, future expansion, transformer sizing, dispatch optimization, and reactive-power support.
 
-The tool combines BESS sizing, transformer selection, AC power-flow analysis, collector-system modeling, contingency assessment, future-expansion planning, reactive-power support, and automated engineering recommendations within an interactive Streamlit application.
+## 🌐 Live Interactive Demo
+
+**[Launch the BESS Grid Interconnection Planning Tool](https://bess-grid-interconnection-tool.streamlit.app)**
+
+### Application Preview
+
+![BESS Grid Interconnection Planning Tool](assets/bess_dashboard.png) 
 
 ---
 
 ## Project Overview
 
-The modeled system consists of a utility-scale BESS connected to a 115 kV utility grid through a 34.5 kV collector system and a main step-up transformer.
+This independent engineering project models the preliminary planning of a utility-scale BESS connected to a 115 kV utility grid through a 34.5 kV collector system.
 
-The baseline plant requirement is:
+The application evaluates alternative operating and expansion scenarios and recommends candidate configurations based on capacity, electrical performance, equipment loading, and N+1 reliability requirements.
 
-- 50 MW export capability
-- 100 MWh energy storage
-- 5 MW / 10 MWh modular BESS blocks
-- 34.5 kV collector system
-- 115 kV utility interconnection
-- Configurable main-transformer rating
-- N+1 BESS block redundancy
+### Baseline System
 
-The application allows the user to modify engineering assumptions and evaluate how the system responds to future growth, utility-source voltage variation, reactive-power requirements, transformer loading, and contingency conditions.
+- **Plant requirement:** 50 MW / 100 MWh
+- **BESS block size:** 5 MW / 10 MWh
+- **Utility interconnection:** 115 kV
+- **Collector system:** 34.5 kV
+- **Existing main transformer:** 75 MVA
+- **N+1 BESS block redundancy**
+- **Future export-growth analysis:** 0–30%
+
+Users can vary grid voltage, future export growth, reactive-power capability, reactive-power command, and transformer assumptions to evaluate how the system responds under different planning conditions.
 
 ---
 
